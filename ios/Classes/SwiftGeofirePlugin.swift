@@ -38,8 +38,12 @@ public class SwiftGeofirePlugin: NSObject, FlutterPlugin, FlutterStreamHandler {
     if(call.method.elementsEqual("GeoFire.start")){
      
         let path = arguements!["path"] as! String
+        if let url = arguements!["url"] as? String, !url.isEmpty {
+            geoFireRef = Database.database(url: url).reference().child(path)
+        } else {
+            geoFireRef = Database.database().reference().child(path)
+        }
         
-        geoFireRef = Database.database().reference().child(path)
         geoFire = GeoFire(firebaseRef: geoFireRef!)
         
         result(true)
