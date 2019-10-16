@@ -17,8 +17,8 @@ A Flutter plugin to get the realtime updates of places nearby.
   s.ios.deployment_target = '8.0'
   s.dependency 'Flutter'
   s.ios.dependency 'GeoFire', '~> 3.0'
-#  s.ios.dependency 'Firebase/Database'
-#  s.ios.dependency 'Firebase'
+  s.ios.dependency 'Firebase/Database', '~> 6.0'
+  #s.ios.dependency 'Firebase'
   s.static_framework = true
 
 end
