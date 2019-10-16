@@ -12,13 +12,13 @@ A Flutter plugin to get the realtime updates of places nearby.
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Your Company' => 'email@example.com' }
   s.source           = { :path => '.' }
+  s.source           = { :git => 'https://github.com/firebase/geofire-objc'}
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.ios.deployment_target = '8.0'
   s.dependency 'Flutter'
-  #s.ios.dependency 'GeoFire', '~> 3.0'
+  s.dependency 'GeoFire'
   #s.ios.dependency 'Firebase/Database', '~> 6.0'
   #s.ios.dependency 'Firebase'
   s.static_framework = true
-  pod ‘GeoFire’, :git => ‘https://github.com/firebase/geofire-objc.git'
 end
